@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1.0">{% load static %}
+
+        <script src="{% static "js/jquery-3.2.1.min.js" %}"></script>
+        <script src="{% static "js/bootstrap.min.js" %}"></script>
+        <script src="{% static "js/jquery.dataTables.min.js" %}"></script>
+        <script src="{% static "js/dataTables.bootstrap.min.js" %}"></script>
+
+        <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+        <link href="{% static "css/bootstrap-theme.min.css" %}" rel="stylesheet">
+        <link href="{% static "css/dataTables.bootstrap.min.css" %}" rel="stylesheet">
+        <link href="{% static "css/jquery.dataTables.min.css" %}" rel="stylesheet">
+        <link href=" {%static "css/font-awesome.min.css"%}" rel="stylesheet">
+        <link href=" {%static "css/style.css"%}" rel="stylesheet">
+        <title>Gerador SIP - Monografias</title>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Gerador SIP</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <a href="/cadastro/"><button type="button" class="btn btn-info navbar-btn"><span class="glyphicon glyphicon-user"></span> Sign up</button></a>
+                        <a href="/login/"><button class="btn btn-danger navbar-btn"><span class="glyphicon glyphicon-log-in"></span> Login</button></a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid background-collor">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Gerador de Pacotes SIP</p>
+                </div>
+                <div class="col-md-12">
+                    <h4>Buscando aplicar os conceitos vistos nas aulas da disciplina de Bases da Gestão Eletrônica de Documentos, este trabalho será desenvolvido para a criação de pacotes SIP (primeiro estágio da cadeia de custódia de Documentos Arquivisticos Digitais).</h4>    
+                </div>
+                <div class="col-md-12">
+                    <h4>Primeiramente o trabalho será focado na criação de pacotes SIP para Documentos nato-digitais, ou seja documentos que nascem em meio digital. Posterior a isso, pretende-se ampliar o sistema para adquirir novas funcionalidades.</h4>
+                </div>
+                <div class="col-md-12">
+                    <h4>O modelo de metadados seguido é o DoublinCore com 15 metadados</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid top-buffer">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <img src="{% static "images/arch.png" %}" class="img-rounded" alt="arch" width="220">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{% static "images/atom.png" %}" class="img-rounded" alt="atom" width="220">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-10">
+                    <div class="footer-descricao">
+                        Gestão Eletrônica de Documentos - Professor Daniel Flores
+                    </div>
+                    
+                </div>
+                <div class="col-md-2">
+                	<div class="footer-contato">
+                		Leonardo e Cássio
+                	</div>
+                </div>
+            </div>    
+        </div>   
+    </footer>
+</html>

@@ -1,0 +1,52 @@
+ body {
+    padding-top: 70px;
+    /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    background-color: #222;
+    border-color: #080808;
+    color: #9d9d9d;
+    height: 40px;
+}
+
+p {
+    font-size: 30px;
+    text-align: center;
+}
+
+.footer-cadastros{
+    position:relative;
+    bottom:0;
+    width:100%;
+    background-color: #222;
+    border-color: #080808;
+    color: #9d9d9d;
+    height: 40px;
+    margin-top: 20px;
+}
+
+.footer-contato {
+    padding-top: 7.5px;
+}
+
+.footer-descricao {
+    padding-top: 7.5px;
+    font-size: 15px;
+}
+
+.top-buffer { margin-top:100px; }
+
+.background-collor { 
+    background-color: #DCDCDC;
+    border-radius: 5px;
+    margin-left: 30px;
+    margin-right: 30px; 
+}
+
+.justify-text{
+    text-align: justify;
+}
