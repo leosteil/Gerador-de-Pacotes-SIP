@@ -6,5 +6,6 @@ urlpatterns = [
 
     url(r'^cadastro/$', views.cadastro),
     url(r'^login/$', views.login),
+    url(r'^newSIP/$', views.newSIP)
 
 ]

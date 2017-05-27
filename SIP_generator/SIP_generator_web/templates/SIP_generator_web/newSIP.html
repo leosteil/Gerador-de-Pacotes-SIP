@@ -15,9 +15,18 @@
         <link href="{% static "css/jquery.dataTables.min.css" %}" rel="stylesheet">
         <link href=" {%static "css/font-awesome.min.css"%}" rel="stylesheet">
         <link href=" {%static "css/style.css"%}" rel="stylesheet">
-        <title>Gerador SIP - Monografias</title>
+        <title id="leo">Gerador SIP - Monografias</title>
 
     </head>
+
+    <script type="text/javascript">
+        function onSub(form){
+            var data = JSON.stringify( $(form).serializeArray());
+
+            console.log(data);
+        }
+    </script>
+
     <body>
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
@@ -45,51 +54,60 @@
             </div>
         </nav>
 
-        <div class="container-fluid background-collor">
-            <div class="row">
-                <div class="col-md-12">
-                    <p>Gerador de Pacotes SIP</p>
+        <div class="container">
+            <form>
+                <div class="form-group row">
+                    <label for="arq" class="col-md-1 col-form-label">File:</label>
+                    <div class="col-md-9">
+                        <input type="file" name="form-control" id="arq">
+                    </div>         
                 </div>
-                <div class="col-md-12">
-                    <h4>Buscando aplicar os conceitos vistos nas aulas da disciplina de Bases da Gestão Eletrônica de Documentos, este trabalho será desenvolvido para a criação de pacotes SIP (primeiro estágio da cadeia de custódia de Documentos Arquivisticos Digitais).</h4>    
+                <div class="form-group row">
+                    <label for="contri" class="col-md-1 col-md-offset-3">Contributor:</label>
+                    <div class="col-md-2">
+                        <input type="text" name="form-control" id="contri">
+                    </div>
                 </div>
-                <div class="col-md-12">
-                    <h4>Primeiramente o trabalho será focado na criação de pacotes SIP para Documentos nato-digitais, ou seja documentos que nascem em meio digital. Posterior a isso, pretende-se ampliar o sistema para adquirir novas funcionalidades.</h4>
+                <div class="form-group row">
+                    <label for="cover" class="col-md-1 col-md-offset-3">Coverage:</label>
+                    <div class="col-md-2">
+                        <input type="text" name="form-group" id="cover">
+                    </div>
                 </div>
-                <div class="col-md-12">
-                    <h4>O modelo de metadados seguido é o DoublinCore com 15 metadados.</h4>
+                <div class="form-group row">
+                    <label for="creator" class="col-md-1 col-md-offset-3">Creator</label>
+                    <div class="col-md-2">
+                        <input type="text" name="form-group" id="creator">
+                    </div>
                 </div>
-            </div>
+                <input type="button" name="submit" value="Submit">
+            </form>
         </div>
 
-        <div class="container-fluid top-buffer">
+        <div class="container">
             <div class="row">
-                    <div class="col-md-6">
-                        <img src="{% static "images/arch.png" %}" class="img-rounded img-responsive" alt="arch" width="500">
-                    </div>
-                    <div class="col-md-3 col-md-offset-3">
-                        <img src="{% static "images/atom.png" %}" class="img-rounded img-responsive" alt="atom" width="300">
-                    </div>
+            <div class="col-md-2 col-md-offset-5">
+                <a href="/"><button type="button" class="btn btn-default btn-block navbar-btn">Voltar</button></a>
             </div>
+        </div>
+        </div>
+
+        <div class="footer-cadastros">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-10">
+                        <div class="footer-descricao">
+                            Gestão Eletrônica de Documentos - Professor Daniel Flores
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="footer-contato">
+                            Leonardo e Cássio
+                        </div>
+                    </div>
+                </div>    
+            </div>   
         </div>
 
     </body>
-
-    <footer>
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-md-10">
-                    <div class="footer-descricao">
-                        Gestão Eletrônica de Documentos - Professor Daniel Flores
-                    </div>
-                    
-                </div>
-                <div class="col-md-2">
-                	<div class="footer-contato">
-                		Leonardo e Cássio
-                	</div>
-                </div>
-            </div>    
-        </div>   
-    </footer>
 </html>
