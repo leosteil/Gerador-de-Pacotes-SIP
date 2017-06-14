@@ -1,11 +1,13 @@
 from django import forms
 from django.contrib import admin
 from django.conf import settings
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
 from .models import *
 
 class DublinCoreMeta(forms.Form):
-	contributor = forms.CharField(label="Contributor", max_length=255, required = False)
-	coverage = forms.CharField(label="Covarage", max_length=255, required = False)
+	contributor = forms.CharField(max_length=255, required = False)
+	coverage = forms.CharField(max_length=255, required = False)
 	"""creator = forms.CharField(label="Creator", max_length=255)
 	date = forms.DateField(label="Date")
 	descripition = forms.CharField(label="Descripiton", max_length=255)
@@ -20,5 +22,16 @@ class DublinCoreMeta(forms.Form):
 	title = forms.CharField(label="Title", max_length=255)
 	type_ = forms.CharField(label="Type", max_length=255)"""
 
+	class Meta:
+		model = DublinCoreMetaModel
+		fields = ['contributor', 'coverage']
 
+	def save(request):
+		if request.method == 'POST':
+			form = DublinCoreMeta(request.POST)
+			if form.is_valid():
+				form.save()
+				return Httpresponse("Ok")
+			else:
+				return Httpresponse("Not Valid")
 

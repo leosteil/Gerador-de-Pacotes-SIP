@@ -6,7 +6,7 @@ class DublinCoreMetaModel(models.Model):
 	
 	contributor = models.CharField(max_length=255)
 	coverage = models.CharField(max_length=255)
-	creator = models.CharField(max_length=255)
+	'''creator = models.CharField(max_length=255)
 	date = models.DateField()
 	descripition = models.CharField(max_length=255)
 	formats = models.CharField(max_length=255)
@@ -18,4 +18,4 @@ class DublinCoreMetaModel(models.Model):
 	source = models.CharField(max_length=255)
 	subject = models.CharField(max_length=255)
 	title = models.CharField(max_length=255)
-	types = models.CharField(max_length=255)
+	types = models.CharField(max_length=255)'''

@@ -18,15 +18,7 @@
         <title id="leo">Gerador SIP - Monografias</title>
 
     </head>
-
-    <script type="text/javascript">
-        function onSub(form){
-            var data = JSON.stringify( $(form).serializeArray());
-
-            console.log(data);
-        }
-    </script>
-
+ 
     <body>
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
@@ -54,44 +46,16 @@
             </div>
         </nav>
 
-        <div class="container">
-            <form>
-                <div class="form-group row">
-                    <label for="arq" class="col-md-1 col-form-label">File:</label>
-                    <div class="col-md-9">
-                        <input type="file" name="form-control" id="arq">
-                    </div>         
+        <div class="container-fluid">
+             <div class="row">
+                <div class="col-md-2 col-md-offset-5">
+                    <form align="center" method="POST" class="post-form">{% csrf_token %}
+                        {{ form }}
+                        <button aling="center" type="submit" class="save btn btn-block btn-success top-buffer">Registrar</button>
+                    </form>
                 </div>
-                <div class="form-group row">
-                    <label for="contri" class="col-md-1 col-md-offset-3">Contributor:</label>
-                    <div class="col-md-2">
-                        <input type="text" name="form-control" id="contri">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="cover" class="col-md-1 col-md-offset-3">Coverage:</label>
-                    <div class="col-md-2">
-                        <input type="text" name="form-group" id="cover">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="creator" class="col-md-1 col-md-offset-3">Creator</label>
-                    <div class="col-md-2">
-                        <input type="text" name="form-group" id="creator">
-                    </div>
-                </div>
-                <input type="button" name="submit" value="Submit">
-            </form>
-        </div>
-
-        <div class="container">
-            <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <a href="/"><button type="button" class="btn btn-default btn-block navbar-btn">Voltar</button></a>
             </div>
         </div>
-        </div>
-
         <div class="footer-cadastros">
             <div class="container-fluid">
                 <div class="row align-items-center">
