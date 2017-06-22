@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import AbstractBaseUser
 
-class DublinCoreMetaModel(models.Model):
+class MetaData(models.Model):
 	
 	contributor = models.CharField(max_length=255)
 	coverage = models.CharField(max_length=255)
@@ -19,3 +19,9 @@ class DublinCoreMetaModel(models.Model):
 	subject = models.CharField(max_length=255)
 	title = models.CharField(max_length=255)
 	types = models.CharField(max_length=255)'''
+
+
+	class Meta:
+		db_table = 'MetaDatas'
+		verbose_name = 'MetaData'
+		verbose_name_plural = 'MetaDatas'
