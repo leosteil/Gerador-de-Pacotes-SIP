@@ -49,7 +49,7 @@
         <div class="container-fluid">
              <div class="row">
                 <div class="col-md-2 col-md-offset-5">
-                    <form align="center" method="POST" class="post-form">{% csrf_token %}
+                    <form enctype="multipart/form-data" align="center" method="POST" class="post-form">{% csrf_token %}
                         {{ form }}
                         <button aling="center" type="submit" class="save btn btn-block btn-success top-buffer">Registrar</button>
                     </form>
