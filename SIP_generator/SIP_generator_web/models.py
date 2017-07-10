@@ -15,7 +15,7 @@ class MetaData(models.Model):
 	publisher = models.CharField(max_length=255)
 	contributor = models.CharField(max_length=255)
 	subject = models.CharField(max_length=255)
-	date = models.DateField()
+	data = models.DateField()
 	description = models.CharField(max_length=255)
 	notes = models.CharField(max_length=255)
 	isPartOf = models.CharField(max_length=255)	

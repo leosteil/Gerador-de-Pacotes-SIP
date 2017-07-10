@@ -43,9 +43,8 @@ def newSip(request):
 
 def empacotar(request):
     cursor = connection.cursor()
-    #cursor.execute("select * from MetaDatas")
 
-    cursor.execute("SELECT filename,title,issued,publisher,contributor,subject,date,description,notes,isPartOf,repository,rights,project_website,_format FROM MetaDatas INTO OUTFILE '/var/lib/mysql-files/metadata.csv' FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';")
+    cursor.execute("SELECT filename,title,issued,publisher,contributor,subject,data,description,notes,isPartOf,repository,rights,project_website,_format FROM MetaDatas INTO OUTFILE '/var/lib/mysql-files/metadata.csv' FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';")
  
     home = expanduser("~")
 
@@ -63,5 +62,7 @@ def empacotar(request):
 
     #remove o arquivo para poder usar novamente o espaço
     os.remove('/var/lib/mysql-files/metadata.csv') 
+
+    cursor.execute('Delete from MetaDatas')
 
     return render(request, 'SIP_generator_web/index.html', locals())

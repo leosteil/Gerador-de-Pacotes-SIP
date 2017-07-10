@@ -9,11 +9,11 @@ import datetime
 class DublinCoreMeta(forms.ModelForm):
 	filename = forms.FileField(label="Filename",max_length=255, required=True)
 	title = forms.CharField(label="Title",max_length=255,required=False)
-	issued = forms.DateField(label="Issued",required=False,initial=datetime.date.today)
+	issued = forms.DateField(label="Issued",initial=datetime.date.today)
 	publisher = forms.CharField(label="Publisher",max_length=255,required=False)
 	contributor = forms.CharField(label="Contributor",max_length=255,required=False)
 	subject = forms.CharField(label="Subject",max_length=255,required=False)
-	date = forms.DateField(label='Data',required=False)
+	data = forms.DateField(label='Data',initial=datetime.date.today)
 	description = forms.CharField(label="Description",max_length=255,required=False)
 	notes = forms.CharField(label="Notes",max_length=255,required=False)
 	isPartOf = forms.CharField(label="Is part Of",max_length=255,required=False)	
@@ -26,4 +26,4 @@ class DublinCoreMeta(forms.ModelForm):
 	class Meta:
 		model = MetaData
 		#fields = ['title', 'creator', 'subject', 'publisher', 'contributor', 'date', 'tipo', 'formato', 'identifier', 'source', 'language', 'relation', 'coverage', 'rights', 'description']
-		fields = ['filename', 'title']
+		fields = ['filename', 'title', 'issued', 'publisher', 'contributor', 'subject', 'data', 'description', 'notes', 'isPartOf', 'repository', 'rights', 'project_website', '_format']

@@ -38,33 +38,23 @@
                             <a href="/newSIP">Gerar SIP</a>
                         </li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <a href="/cadastro/"><button type="button" class="btn btn-info navbar-btn"><span class="glyphicon glyphicon-user"></span> Sign up</button></a>
-                        <a href="/login/"><button class="btn btn-danger navbar-btn"><span class="glyphicon glyphicon-log-in"></span> Login</button></a>
-                    </ul>
                 </div>
             </div>
         </nav>
 
         <div class="container-fluid">
              <div class="row">
-                <div class="col-md-2 col-md-offset-5">
+                <div class="col-md-2 col-md-offset-3">
                     <form enctype="multipart/form-data" align="center" method="POST" class="post-form">{% csrf_token %}
                         {{ form }}
                         <button aling="center" type="submit" class="save btn btn-block btn-success top-buffer">Registrar</button>
                     </form>
                 </div>
-            </div>
-        </div>
-
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <a href="/empacotar/"><button aling="center">Empacotar Dados</button></a>
+                <div class="col-md-offset-3 col-md-2">
+                     <a href="/empacotar/"><button aling="center">Empacotar Dados</button></a>
                 </div>
             </div>
         </div>
-
         <div class="footer-cadastros">
             <div class="container-fluid">
                 <div class="row align-items-center">
