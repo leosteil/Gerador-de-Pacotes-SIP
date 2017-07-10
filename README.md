@@ -19,14 +19,17 @@ pip3 install Django
 ### Criar database nomeada como: "sipDB"
 
 CREATE DATABASE sipDB;
+
 Criar usuário "sip" com privilégios de root e password "root"
 
 CREATE USER 'sip'@'localhost' IDENTIFIED BY 'root';
+
 GRANT ALL PRIVILEGES ON *.* TO 'sip'@'localhost' WITH GRANT OPTION;
 
 ### Configuração do arquivo "settings.py" do projeto Django
 
-'DATABASES = {
+DATABASES = {
+
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'sipDB',
@@ -35,7 +38,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'sip'@'localhost' WITH GRANT OPTION;
         'HOST': 'localhost',
         'PORT': '3306',
     }
-}'
+}
 
 
 
