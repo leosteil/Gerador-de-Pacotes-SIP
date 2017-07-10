@@ -26,7 +26,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'sip'@'localhost' WITH GRANT OPTION;
 
 ### Configuração do arquivo "settings.py" do projeto Django
 
-DATABASES = {
+'DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'sipDB',
@@ -35,7 +35,7 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '3306',
     }
-}
+}'
 
 
 
